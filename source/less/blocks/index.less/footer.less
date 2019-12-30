@@ -1,0 +1,201 @@
+.map {
+  position: relative;
+  width: 320px;
+  height: 362px;
+  margin: 0 auto;
+}
+
+.map__pin {
+  position: absolute;
+  left: 138px;
+  top: 138px;
+}
+
+.map__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: bottom;
+}
+
+.footer__container {
+  width: 320px;
+  margin: 0 auto;
+}
+
+.footer__logo-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 280px;
+  height: 88px;
+  padding-top: 5px;
+  border-bottom: 1px solid #d9d9d9;
+  margin: 0 auto;
+}
+
+.social-wrapper {
+  width: 280px;
+  height: 62px;
+  border-bottom: 1px solid #d9d9d9;
+  margin: 0 auto;
+}
+
+.social__list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 124px;
+  height: 62px;
+  list-style: none;
+  margin: 0;
+  margin-left: 74px;
+  padding: 0;
+}
+
+.social__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-academy__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  width: 280px;
+  height: 77px;
+  border-bottom: 1px solid #d9d9d9;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.logo-academy__text {
+  width: 114px;
+  height: 30px;
+  font-size: 16px;
+  font-family: "Arial";
+}
+
+.logo-academy__icon {
+  width: 27px;
+  height: 34px;
+}
+
+.logo-academy__text span {
+  text-transform: uppercase;
+}
+
+.footer__wrap-flex {
+  background-color: #f2f2f2;
+}
+
+@media (min-width: 768px) {
+  .map {
+    width: 768px;
+    height: 396px;
+  }
+
+  .map__pin {
+    left: 333px;
+    top: 145px;
+    width: 113px;
+    height: 106px;
+  }
+
+  .footer__container {
+    width: 768px;
+    background-color: #f2f2f2;
+  }
+
+  .footer__wrap-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 708px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+
+  .footer__logo-wrapper {
+    width: 145px;
+    height: 110px;
+    justify-content: start;
+    border: none;
+    margin: 0;
+    padding-top: 0;
+  }
+
+  .social-wrapper {
+    width: 125px;
+    height: 110px;
+    border: none;
+  }
+
+  .social__list {
+    width: 125px;
+    height: 105px;
+    align-items: center;
+    margin: 0;
+    margin: 0 auto;
+  }
+
+  .social__item:nth-child(1) .footer__social-icon {
+    width: 30px;
+    height: 16px;
+  }
+
+  .social__item:nth-child(2) .footer__social-icon {
+    width: 23px;
+    height: 23px;
+  }
+
+  .social__item:nth-child(3) .footer__social-icon {
+    width: 14px;
+    height: 28px;
+  }
+
+  .logo-academy__wrapper {
+    width: 164px;
+    height: 110px;
+    border: none;
+    margin: 0;
+  }
+
+  @media (min-width: 1440px) {
+    .map {
+      width: 1440px;
+      height: 400px;
+    }
+
+    .map__pin {
+      left: 1010px;
+      top: 155px;
+    }
+
+    .footer__container {
+      width: 1440px;
+      background-color: #f2f2f2;
+    }
+
+    .footer__wrap-flex {
+      width: 1220px;
+      margin: 0 auto;
+      padding-left: 0;
+      padding-right: 0;
+      background-color: none;
+    }
+
+    .logo-academy__text {
+      height: 25px;
+    }
+
+    .social__list {
+      height: 110px;
+    }
+  }
+}

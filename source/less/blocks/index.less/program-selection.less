@@ -1,0 +1,148 @@
+.program-selection__wrapper {
+  position: relative;
+  margin-bottom: 200px;
+}
+
+.program-selection {
+  position: absolute;
+  top: -300px;
+  width: 280px;
+  padding-top: 26px;
+  padding-right: 20px;
+  padding-left: 20px;
+  z-index: 3;
+}
+
+.program-selection__header {
+  width: 250px;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
+  text-align: center;
+  padding: 0;
+  margin: 0 auto;
+  margin-bottom: 17px;
+}
+
+.program-selection__text {
+  width: 250px;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-family: "Oswald";
+  font-weight: 400;
+  font-size: 14px;
+  text-align: center;
+  padding: 0;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.program-selection__button {
+  width: 280px;
+  height: 40px;
+  background-color: @green;
+  color: #ffffff;
+  font-family: "Oswald";
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  border-style: none;
+  border: none;
+  padding: 0;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .program-selection {
+    width: 533px;
+    top: 0;
+    padding-right: 115px;
+    padding-left: 120px;
+    padding-top: 45px;
+  }
+
+  .program-selection__wrapper {
+    margin-bottom: 850px;
+  }
+
+  .program-selection__header {
+    width: 415px;
+    color: #111111;
+    font-size: 60px;
+    line-height: 60px;
+    text-align: start;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 35px;
+  }
+
+  .program-selection__text {
+    width: 415px;
+    color: #111111;
+    font-size: 20px;
+    text-align: start;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 20px;
+  }
+
+  .program-selection__img-feed-wrapper {
+    position: relative;
+    width: 709px;
+    height: 809px;
+    z-index: 2;
+  }
+
+  .program-selection__button {
+    position: absolute;
+    font-size: 20px;
+    top: 270px;
+    left: 120px;
+    width: 244px;
+    height: 52px;
+    z-index: 3;
+  }
+
+  .program-selection__img-feed {
+    margin-left: -90px;
+  }
+
+  @media (min-width: 1440px) {
+    .program-selection__img-feed {
+      position: absolute;
+      left: 370px;
+      top: -285px;
+      margin: 0;
+    }
+
+    .program-selection__wrapper {
+      width: 360px;
+      padding: 0;
+      padding-left: 190px;
+      margin: 0;
+      margin-bottom: 610px;
+    }
+
+    .program-selection {
+      width: 550px;
+      padding: 0;
+      padding-top: 60px;
+      margin: 0 auto;
+    }
+
+    .program-selection__header {
+      margin-bottom: 40px;
+    }
+
+    .program-selection__button {
+      top: 295px;
+      left: 0;
+      width: 245px;
+    }
+
+    .program-selection__img-feed-wrapper {
+      height: 0;
+    }
+  }
+}

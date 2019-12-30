@@ -1,0 +1,123 @@
+.cooperation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 280px;
+  min-height: 75px;
+  margin: 0 auto;
+  padding: 19px;
+}
+
+.cooperation__header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 130px;
+  text-transform: uppercase;
+  font-family: "Oswald";
+  font-size: 16px;
+  line-height: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.cooperation__wrapper-adress {
+  width: 138px;
+  padding: 0;
+  padding-top: 7px;
+  line-height: 20px;
+  font-size: 14px;
+  min-height: 64px;
+}
+
+.cooperation__adress {
+  display: flex;
+  line-height: 20px;
+  width: 138px;
+  padding: 0;
+  margin: 0;
+}
+
+.cooperation__adress-city {
+  font-family: "Arial";
+}
+
+@media (min-width: 768px) {
+  .cooperation {
+    width: 728px;
+    min-height: 160px;
+    padding: 20px;
+  }
+
+  .cooperation__header {
+    width: 200px;
+    font-size: 20px;
+    line-height: 25px;
+    padding-left: 50px;
+  }
+
+  .cooperation__wrapper-adress {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    text-align: right;
+    padding-top: 0;
+    width: 250px;
+    min-height: 80px;
+  }
+
+  .cooperation__adress {
+    font-size: 16px;
+    line-height: 20px;
+    width: 195px;
+    padding-right: 53px;
+  }
+
+  .cooperation__adress-city {
+    font-size: 16px;
+    line-height: 20px;
+    width: 195px;
+    padding-right: 53px;
+  }
+
+  @media (min-width: 1440px) {
+    .cooperation__wrapper {
+      position: relative;
+      width: 1440px;
+      min-height: 400px;
+      margin: 0 auto;
+    }
+
+    .cooperation__header {
+      padding-left: 52px;
+    }
+
+    .cooperation__wrapper-adress {
+      width: 250px;
+      min-height: 80px;
+    }
+
+    .cooperation {
+      position: absolute;
+      left: 109px;
+      top: 100px;
+      width: 520px;
+      min-height: 150px;
+      background-color: #ffffff;
+      padding: 25px;
+      z-index: 2;
+    }
+
+    .cooperation__adress {
+      width: 165px;
+      text-align: left;
+      margin-bottom: 19px;
+    }
+
+    .cooperation__adress-city {
+      width: 165px;
+      text-align: left;
+    }
+  }
+}

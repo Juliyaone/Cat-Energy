@@ -1,0 +1,59 @@
+.page {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  height: auto;
+  background-color: #ffffff;
+  margin: auto;
+  z-index: 1;
+}
+
+.page__background-image {
+  width: auto;
+  height: 305px;
+  background-color: @green;
+  background-image: url("../img/index-background-mobile.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  color: #ffffff;
+  padding: 0;
+  margin: 0;
+  z-index: 2;
+}
+
+@media (min-width: 768px) {
+  .page {
+    width: 768px;
+  }
+
+  .page__background-image {
+    display: none;
+  }
+
+  @media (min-width: 1440px) {
+    .page {
+      position: relative;
+      width: 1440px;
+    }
+
+    .page__background-image {
+      position: absolute;
+      right: 0;
+      top: -165px;
+      display: block;
+      width: 720px;
+      height: 695px;
+      background-color: @green;
+      background-image: url("../img/index-background-desktop.jpg");
+      background-repeat: no-repeat;
+      background-position: center top;
+      background-size: cover;
+      color: #ffffff;
+      padding: 0;
+      margin: 0;
+      z-index: 1;
+    }
+  }
+}
