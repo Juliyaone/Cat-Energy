@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Интернет-магазин «Cat Energy»</title>
     <link rel="stylesheet" href="css/style.min.css">
-    <link rel="preload" href="fonts/Oswaldregular.woff2" as="font">
+    <link rel="preload" href="fonts/Oswaldregular.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/Oswaldmedium.woff2" as="font">
     <script>
       // Picture element HTML5 shiv
@@ -88,9 +88,9 @@
           <p class="program-selection__text">Занялся собой? Займись котом!</p>
           <div class="program-selection__img-feed-wrapper">
             <picture>
-              <source media="(min-width: 1440px)" srcset="img/index-can-desktop.png">
-              <source media="(min-width: 768px)" srcset="img/index-can-tablet.jpg">
-              <img class="program-selection__img-feed" src="img/index-can-mobile.png" alt="Картинка корма для кота">
+              <source media="(min-width: 1440px)" srcset="img/index-can-desktop@1x.png 1x, img/index-can-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg 1x, img/index-can-tablet@2x.jpg 2x">
+              <img class="program-selection__img-feed" src="img/index-can-mobile@1x.png" srcset="img/index-can-mobile@2x.png 2x"alt="Картинка корма для кота">
             </picture>
           </div>
           <button class="program-selection__button">Подобрать программу</button>
@@ -174,28 +174,55 @@
             </div>
           </div>
           <div class="example__wrapper-flex">
-            <div class="slider">
+
+            <div class="slider__mobile">
+              <input class="slider__mobile-bnt-1" type="radio" id="btn__mobile-1" name="toggle" checked>
+              <input class="slider__mobile-bnt-2" type="radio" id="btn__mobile-2" name="toggle">
+
+              <div class="slider__img-contaiter">
+                <div class="slider__img-inner">
+
+                  <div class="slider__img-wrapper">
+                    <picture>
+                      <img class="slider-mobile__cat-big-img" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" width="311" height="232" alt="Упитанный кот">
+                    </picture>
+                  </div>
+
+                  <div class="slider__img-wrapper">
+                    <picture>
+                      <img class="slider-mobile__cat-small-img" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" width="251" height="240" alt="Стройный кот">
+                    </picture>
+                  </div>
+                </div>
+              </div>
+              <div class="slider__mobile-controls-wrapper">
+                <label for="btn__mobile-1" class="slider__mobile-text">Было</label>
+                <div class="slider__mobile-line"></div>
+                <label for="btn__mobile-2" class="slider__mobile-text">Стало</label>
+              </div>
+            </div>
+
+
+            <div class="slider__tablet-desktop">
               <input class="slider-bnt-1" type="radio" id="btn-1" name="toggle" checked>
               <input class="slider-bnt-2" type="radio" id="btn-2" name="toggle">
               <div class="slider__inner">
                 <div class="slider__slides">
 
-                  <div class="slider__cat-big-wrapper">
-                    <div class="slider__cat-big-background">
+                  <div class="slider__cat-small-wrapper">
+                    <div class="slider__cat-small-background">
                       <picture>
-                        <source media="(min-width: 1440px)" srcset="img/before-desktop.png">
-                        <source media="(min-width: 768px)" srcset="img/before-tablet.png">
-                        <img class="slider__cat-big-img" src="img/before-mobile.png" width="311" height="232" alt="Упитанный кот">
+                        <source media="(min-width: 1440px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
+                        <img class="slider__cat-small-img" src="img/after-tablet@1x.png" srcset="img/after-tablet@2x.png 2x" width="690" height="517" alt="Стройный кот">
                       </picture>
                     </div>
                   </div>
 
-                  <div class="slider__cat-small-wrapper img-overlay">
-                    <div class="slider__cat-small-background">
+                  <div class="slider__cat-big-wrapper img-overlay">
+                    <div class="slider__cat-big-background">
                       <picture>
-                        <source media="(min-width: 1440px)" srcset="img/after-desktop.png">
-                        <source media="(min-width: 768px)" srcset="img/after-tablet.png">
-                        <img class="slider__cat-small-img" src="img/after-mobile.png" width="251" height="240" alt="Стройный кот">
+                        <source media="(min-width: 1440px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
+                        <img class="slider__cat-big-img" src="img/before-tablet@1x.png" srcset="img/before-tablet@2x.png 2x" width="690" height="517" alt="Упитанный кот">
                       </picture>
                     </div>
                   </div>
@@ -206,7 +233,6 @@
                 <div class="slider__controls-wrapper">
                   <label for="btn-1" class="slider__text">Было</label>
                   <div class="slider__line">
-                    <div class="slider__line-comtrols-mobile"></div>
                   </div>
                   <label for="btn-2" class="slider__text">Стало</label>
                 </div>
@@ -219,17 +245,18 @@
     <footer>
       <div class="cooperation__wrapper">
         <div class="cooperation">
-          <p class="cooperation__header">Приглашаем <br> к сотрудничеству дилеров!</p>
+          <p class="cooperation__header">Приглашаем к сотрудничеству дилеров!</p>
           <div class="cooperation__wrapper-adress">
             <p class="cooperation__adress">ул. Большая Конюшенная, д. 19/8</p>
             <span class="cooperation__adress-city">Санкт-Петербург</span>
           </div>
         </div>
         <div class="map">
+          <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A625126c7694ac9d95e3dcb821b60a9f362a52315cab5f5d00b95b96ce20bf4f2&amp;source=constructor" width="100%" height="400" frameborder="0"></iframe>
           <picture>
-            <source media="(min-width: 1440px)" srcset="img/map-desktop.jpg">
-            <source media="(min-width: 768px)" srcset="img/map-tablet.jpg">
-            <img class="map__img" src="img/map.jpg" width="320" height="400" alt="Карта">
+            <source media="(min-width: 1440px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x">
+            <img class="map__img" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" width="320" height="400" alt="Карта">
           </picture>
           <picture>
             <source media="(min-width: 768px)" srcset="img/map-pin-tablet.png">

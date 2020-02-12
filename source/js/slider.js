@@ -4,9 +4,9 @@ var initComparisons = function () {
 
   var compareImages = function (img) {
     var img, clicked = 0;
-    var w = img.offsetWidth;
+    var widthImg = img.offsetWidth;
     var h = img.offsetHeight;
-    img.style.width = (w / 2) + 'px';
+    img.style.width = (widthImg / 2) + 'px';
 
     var sliderImg = document.createElement('div');
     sliderImg.setAttribute('class', 'slider__controls-border-point');
@@ -14,11 +14,11 @@ var initComparisons = function () {
 
 /* Поместите ползунок посередине: */
     sliderImg.style.top = h - 95 + 'px';
-    sliderImg.style.left = (w / 2) - (sliderImg.offsetWidth / 2) + 'px';
+    sliderImg.style.left = (widthImg / 2) - (sliderImg.offsetWidth / 2) + 'px';
 /* Выполнить функцию при нажатии кнопки мыши: */
-    var slideReady = function (e) {
+    var slideReady = function (evt) {
 /* Предотвращение любых других действий, которые могут возникнуть при перемещении по изображению: */
-      e.preventDefault();
+      evt.preventDefault();
 /* Теперь ползунок нажат и готов к перемещению: */
       clicked = 1;
 /* Выполнить функцию при перемещении ползунка: */
@@ -37,29 +37,31 @@ var initComparisons = function () {
 /* И выпущен (для сенсорных экранов: */
     window.addEventListener('touchstop', slideFinish);
 
-    var slideMove = function (e) {
+    var slideMove = function (evt) {
 /* Если ползунок больше не нажимается, выйдите из этой функции: */
       if (clicked == 0) return false;
 /* Получить позицию курсора x: */
-      var pos = getCursorPos(e)
+      var pos = getCursorPos(evt)
+      var gapLeft = 170;
+      var gapRight = 593;
 /* Предотвратить размещение ползунка за пределами изображения: */
-      if (pos < 165) {
-        pos = 165;
+      if (pos < gapLeft) {
+        pos = gapLeft;
       }
-      if (pos > 593) {
-        pos = 593;
+      if (pos > gapRight) {
+        pos = gapRight;
       }
 /* Выполнить функцию, которая изменит размер наложенного изображения в соответствии с курсором: */
       slide(pos);
     }
 
-    var getCursorPos = function (e) {
+    var getCursorPos = function (evt) {
       var x = 0;
-      e = e || window.event;
+      evt = evt || window.event;
 /* Получить x позиций изображения: */
       var a = img.getBoundingClientRect();
 /* Рассчитать координату x курсора относительно изображения: */
-      x = e.pageX - a.left;
+      x = evt.pageX - a.left;
 /* Рассмотрим любую прокрутку страницы: */
       x = x - window.pageXOffset;
       return x;

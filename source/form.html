@@ -90,15 +90,15 @@
                 <ul class="name-list">
                   <li class="form__item">
                     <label for="name">Имя:*</label>
-                    <input type="text" name="name" id="name" value="Барсик">
+                    <input type="text" name="name" id="name" placeholder="Барсик">
                   </li>
                   <li class="form__item">
                     <label for="weight">Вес(кг):*</label>
-                    <input type="text" name="weight" id="weight" value="7">
+                    <input type="text" name="weight" id="weight" placeholder="7">
                   </li>
                   <li class="form__item">
                     <label for="age">Возраст(лет):*</label>
-                    <input type="text" name="age" id="age" value="7">
+                    <input type="text" name="age" id="age" placeholder="7">
                   </li>
                 </ul>
               </fieldset>
@@ -128,7 +128,7 @@
                 <ul class="form__contacts-list">
                   <li class="form__contacts-item">
                     <label for="form__contacts-email">e-mail:*</label>
-                    <input class="form__contacts-mail" type="email" name="email" id="form__contacts-email" value="kuklachev@gmail.com">
+                    <input class="form__contacts-mail" type="email" name="email" id="form__contacts-email" placeholder="kuklachev@gmail.com">
                     <svg class="form__contacts-email-icon" width="17" height="13" role="img">
                       <title>Иконка письма</title>
                       <use xlink:href="#mail"></use>
@@ -136,7 +136,7 @@
                   </li>
                   <li class="form__contacts-item">
                     <label for="form__contacts-tel">Телефон:*</label>
-                    <input class="form__contacts-tel" type="tel" name="tel" id="form__contacts-tel" value="8 (960) 900-60-90" pattern="\+?[0-9\s\-\(\)]+">
+                    <input class="form__contacts-tel" type="tel" name="tel" id="form__contacts-tel" placeholder="8 (960) 900-60-90" pattern="\+?[0-9\s\-\(\)]+">
                     <svg class="form__contacts-tel-icon" width="20" height="20" role="img">
                       <title>Иконка телефона</title>
                       <use xlink:href="#phone"></use>
@@ -192,10 +192,12 @@
           </div>
         </div>
         <div class="map">
+          <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A625126c7694ac9d95e3dcb821b60a9f362a52315cab5f5d00b95b96ce20bf4f2&amp;source=constructor" width="100%" height="400" frameborder="0"></iframe>
+
           <picture>
-            <source media="(min-width: 1440px)" srcset="img/map-desktop.jpg">
-            <source media="(min-width: 768px)" srcset="img/map-tablet.jpg">
-            <img class="map__img" src="img/map.jpg" width="320" height="400" alt="Карта">
+            <source media="(min-width: 1440px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x">
+            <img class="map__img" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" width="320" height="400" alt="Карта">
           </picture>
           <picture>
             <source media="(min-width: 768px)" srcset="img/map-pin-tablet.png">
