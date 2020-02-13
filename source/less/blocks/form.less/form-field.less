@@ -8,7 +8,7 @@
   text-transform: uppercase;
   font-size: 16px;
   line-height: 34px;
-  font-family: Oswald;
+  font-family: "Oswald", "Arial", sans-serif;
   font-weight: 400;
 }
 
@@ -28,7 +28,7 @@
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
-  font-family: Oswald;
+  font-family: "Oswald", "Arial", sans-serif;
   color: #111111;
   padding: 0;
   margin: 0 auto;
@@ -88,7 +88,6 @@
   color: #222222;
   font-size: 16px;
   line-height: 18px;
-  color: #222222;
 }
 
 .form__item input {
@@ -104,7 +103,7 @@
   color: #444444;
   text-transform: uppercase;
   font-size: 16px;
-  font-family: Oswald;
+  font-family: "Oswald", "Arial", sans-serif;
   font-weight: 400;
   padding-left: 15px;
 }
@@ -147,7 +146,6 @@
 
 .form__radio-item {
   width: 280px;
-
 }
 
 .form__radio-item label {
@@ -189,7 +187,7 @@
 }
 
 .form__radio-item label:focus::before {
-  border: 1px solid #BABABA;
+  border: 1px solid #bababa;
 }
 
 .form__radio-item label:active {
@@ -198,12 +196,12 @@
 
 .form__radio-item label:active::before,
 .form__radio-item label:active::after {
-  border: 1px solid #BABABA;
+  border: 1px solid #bababa;
   opacity: 0.32;
 }
 
 .form__radio-input:checked + .form__radio-label::before {
-  border: 1px solid #BABABA;
+  border: 1px solid #bababa;
 }
 
 .form__radio-input + .form__radio-label::after {
@@ -258,6 +256,7 @@
 
 
 .form__contacts-item {
+  position: relative;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -278,7 +277,7 @@
   width: 100%;
   height: 40px;
   border: 1px solid #e6e6e6;
-      background-color: transparent;
+  background-color: transparent;
   padding: 0;
   padding-left: 15px;
   margin: 0;
@@ -288,14 +287,10 @@
   color: #444444;
   text-transform: uppercase;
   font-size: 16px;
-  font-family: Oswald;
+  font-family: "Oswald", "Arial", sans-serif;
   font-weight: 400;
   padding-left: 15px;
   padding-right: 40px;
-}
-
-.form__contacts-item {
-  position: relative;
 }
 
 .form__contacts-item input:hover {
@@ -361,7 +356,6 @@
   padding-right: 24px;
   padding-left: 20px;
   margin: 0;
-  margin-bottom: 35px;
 }
 
 .form__review textarea {
@@ -484,7 +478,7 @@
   opacity: 1;
 }
 
-.form__checkbox-input:checked + .form__checkbox-label::after{
+.form__checkbox-input:checked + .form__checkbox-label::after {
   position: absolute;
   left: 0;
   top: 0;
@@ -498,11 +492,11 @@
 }
 
 .form__checkbox-item:hover::before {
-  border: 1px solid #BABABA;
+  border: 1px solid #bababa;
 }
 
 .form__checkbox-item:focus::before {
-  border: 1px solid #BABABA;
+  border: 1px solid #bababa;
   outline: none;
 }
 
@@ -524,7 +518,7 @@
   height: 40px;
   background-color: @green;
   color: #ffffff;
-  font-family: Oswald;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
@@ -540,7 +534,7 @@
   width: 280px;
   height: 40px;
   text-align: center;
-  font-family: Arial;
+  font-family: "Arial", sans-serif;
   padding-top: 15px;
 }
 
@@ -621,7 +615,7 @@
 
   .form__radio-list {
     min-height: 145px;
-    width: 593px
+    width: 593px;
   }
 
   .form__radio-item {
@@ -671,7 +665,7 @@
   .form__contacts-title::before {
     position: absolute;
     top: 20px;
-    left: 0px;
+    left: 0;
     content: "";
     width: 30px;
     height: 3px;
@@ -704,13 +698,13 @@
     padding-left: 70px;
     padding-right: 40px;
     text-align: left;
-    margin-bottom: 75px
+    margin-bottom: 75px;
   }
 
   .form__review-title::before {
     position: absolute;
     top: 20px;
-    left: 0px;
+    left: 0;
     content: "";
     width: 30px;
     height: 3px;
@@ -735,13 +729,13 @@
     padding-left: 70px;
     padding-right: 40px;
     text-align: left;
-    margin-bottom: 55px
+    margin-bottom: 55px;
   }
 
   .form__checkbox-title::before {
     position: absolute;
     top: 20px;
-    left: 0px;
+    left: 0;
     content: "";
     width: 30px;
     height: 3px;
@@ -773,7 +767,7 @@
     top: 9px;
   }
 
-  .form__checkbox-input:checked + .form__checkbox-label::after{
+  .form__checkbox-input:checked + .form__checkbox-label::after {
     left: 5px;
     top: -1px;
   }

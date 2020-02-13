@@ -78,7 +78,7 @@
 }
 
 .example__total-text {
-  font-family: "Oswald";
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 14px;
   text-transform: uppercase;
   padding: 0;
@@ -189,8 +189,8 @@
       background-color: #f2f2f2;
       width: 1440px;
       min-height: 460px;
-      padding-left: 0px;
-      padding-right: 0px;
+      padding-left: 0;
+      padding-right: 0;
     }
 
     .example__wrapper-flex:nth-child(1) {
@@ -199,16 +199,17 @@
     }
 
     .example__wrapper-flex:nth-child(2) {
+      position: relative;
+      width: 790px;
       padding-left: 0;
       padding-right: 0;
     }
 
     .example__header {
       width: 555px;
-      margin-bottom: 145px;
       margin: 0;
       padding-left: 110px;
-      margin-bottom: 75px
+      margin-bottom: 75px;
     }
 
     .example__text {
@@ -246,11 +247,6 @@
     .example__wrapper-flex {
       display: flex;
       flex-direction: column;
-    }
-
-    .example__wrapper-flex:nth-child(2) {
-      position: relative;
-      width: 790px;
     }
 
     .cell legend {
