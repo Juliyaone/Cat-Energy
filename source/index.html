@@ -2,15 +2,16 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial=scale=1">
     <title>Интернет-магазин «Cat Energy»</title>
     <link rel="stylesheet" href="css/style.min.css">
-    <link rel="preload" href="fonts/Oswaldregular.woff2" as="font">
+    <link rel="preload" href="fonts/Oswaldregular.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/Oswaldmedium.woff2" as="font">
     <script>
       // Picture element HTML5 shiv
     document.createElement( "picture" );
     </script>
-    <script src="js/picturefill.js"></script>
+    <script src="js/picturefill.js" async></script>
   </head>
   <body>
     <div style="display:none">
@@ -20,7 +21,7 @@
     <header class="page-header">
       <div class="page-header__logo-toogle-wrapper">
         <div class="page-header__logo-wrapper">
-          <a class="page-header__logo-link" tabindex="0">
+          <a class="page-header__logo-link" tabindex="0" alt="Логотип «Cat Energy»">
             <svg class="page-header__logo-image" width="33" height="38" role="img">
               <title>Логотип «Cat Energy»</title>
               <use xlink:href="#logo-mobile"></use>
@@ -36,7 +37,7 @@
           </a>
         </div>
         <div class="page-header__logo-text-wrapper">
-          <a class="page-header__logo-text" tabindex="0">
+          <a class="page-header__logo-text" tabindex="0" alt="Логотип «Cat Energy»">
             <svg class="page-header__logo-text" width="101" height="18" role="img">
               <title>Логотип «Cat Energy»</title>
               <use xlink:href="#logo-mobile-header"></use>
@@ -44,17 +45,17 @@
           </a>
         </div>
         <div class="page-header__toggle-wrapper">
-          <button class="page-header__toggle page-header__toggle--active" type="button">
+          <button class="page-header__toggle page-header__toggle--active" type="button" alt="Открыть меню">
             <span class="visually-hidden">Открыть меню</span>
             <svg class="page-header__toggle-icon" width="24" height="18" role="img">
-              <title>Меню</title>
+              <title>Открыть меню</title>
               <use xlink:href="#mobile-menu"></use>
             </svg>
           </button>
-          <button class="page-header__cross page-header__cross--none" type="button">
+          <button class="page-header__cross page-header__cross--none" type="button" alt="Закрыть меню">
             <span class="visually-hidden">Закрыть меню</span>
             <svg class="page-header__cross-icon" width="24" height="18" role="img">
-              <title>Крестик</title>
+              <title>Закрыть меню</title>
               <use xlink:href="#close"></use>
             </svg>
           </button>
@@ -64,13 +65,13 @@
       <nav class="main-nav main-nav--closed main-nav--nojs">
           <div class="main-nav__wrapper">
             <ul class="main-nav__list site-list">
-              <li class="site-list__item site-list--item-active">
+              <li class="site-list__item site-list--item-active-index site-list--item-index">
                 <a href="index.html">Главная</a>
               </li>
-              <li class="site-list__item">
+              <li class="site-list__item site-list--item-index">
                 <a href="catalog.html">Каталог продукции</a>
               </li>
-              <li class="site-list__item">
+              <li class="site-list__item site-list--item-index">
                 <a href="form.html">Подбор программы</a>
               </li>
             </ul>
@@ -88,12 +89,19 @@
           <p class="program-selection__text">Занялся собой? Займись котом!</p>
           <div class="program-selection__img-feed-wrapper">
             <picture>
-              <source media="(min-width: 1440px)" srcset="img/index-can-desktop.png">
-              <source media="(min-width: 768px)" srcset="img/index-can-tablet.jpg">
-              <img class="program-selection__img-feed" srcset="img/index-can-mobile.png" alt="Картинка корма для кота">
+
+              <source type="image/webp" media="(min-width: 1440px)" srcset="img/index-can-desktop@1x.webp 1x, img/index-can-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/index-can-tablet@1x.webp 1x, img/index-can-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/index-can-mobile@1x.webp, img/index-can-mobile@2x.png 2x">
+
+              <source media="(min-width: 1440px)" srcset="img/index-can-desktop@1x.png 1x, img/index-can-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg 1x, img/index-can-tablet@2x.jpg 2x">
+              <img class="program-selection__img-feed" src="img/index-can-mobile@1x.png" srcset="img/index-can-mobile@2x.png 2x"alt="Картинка корма для кота">
             </picture>
           </div>
-          <button class="program-selection__button">Подобрать программу</button>
+          <a href="form.html" class="program-selection__button-link">
+            <button class="program-selection__button">Подобрать программу</button>
+          </a>
         </section>
       </div>
 
@@ -105,11 +113,8 @@
           <div class="nutrition-program__text-wrapper">
             <h2 class="nutrition-program__header">Похудение</h2>
             <p class="nutrition-program__text">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-            <a class="nutrition-program__link" href="#"><span class="nutrition-program__link-text">Каталог slim</span>
-              <svg class="nutrition-program__arrow" width="24" height="11" role="img">
-                <title>Перейти в каталог</title>
-                <use xlink:href="#right-arrow-long"></use>
-              </svg>
+            <a class="nutrition-program__link" href="#">
+              <span class="nutrition-program__link-text">Каталог slim</span>
             </a>
           </div>
         </div>
@@ -120,11 +125,8 @@
           <div class="nutrition-program__text-wrapper">
             <h2 class="nutrition-program__header">Набор массы</h2>
             <p class="nutrition-program__text">Заработать авторитет среди дворовых котов <br> и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые <br> мышцы!</p>
-          <a class="nutrition-program__link" href="#"><span class="nutrition-program__link-text">Каталог pro</span>
-            <svg class="nutrition-program__arrow" width="24" height="11" role="img">
-              <title>Перейти в каталог</title>
-              <use xlink:href="#right-arrow-long"></use>
-            </svg>
+          <a class="nutrition-program__link" href="#">
+            <span class="nutrition-program__link-text">Каталог pro</span>
           </a>
           </div>
         </div>
@@ -135,22 +137,30 @@
           <h3 class="how-it-works__header">Как это работает</h3>
           <ul class="how-it-works__list">
             <li class="how-it-works__item">
-              <div class="advantage-img"></div>
+              <div class="advantage-img-background">
+                <div class="advantage-img"></div>
+              </div>
               <div class="advantage__background-digital">1</div>
               <p class="how-it-works__text">Функциональное питание содержит только полезные питательные вещества.</p>
             </li>
             <li class="how-it-works__item">
-              <div class="advantage-img"></div>
+              <div class="advantage-img-background">
+                <div class="advantage-img"></div>
+              </div>
               <div class="advantage__background-digital">2</div>
               <p class="how-it-works__text">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
             </li>
             <li class="how-it-works__item">
+            <div class="advantage-img-background">
               <div class="advantage-img"></div>
+            </div>
               <div class="advantage__background-digital">3</div>
               <p class="how-it-works__text">Замените один-два приема обычной еды на наше функциональное питание.</p>
             </li>
             <li class="how-it-works__item">
-              <div class="advantage-img"></div>
+              <div class="advantage-img-background">
+                <div class="advantage-img"></div>
+              </div>
               <div class="advantage__background-digital">4</div>
               <p class="how-it-works__text">Уже через месяц наслаждайтесь изменениями к лучшему <br> вашего питомца!</p>
             </li>
@@ -159,9 +169,9 @@
       </section>
 
       <section class="example">
+        <h3 class="example__header">Живой пример</h3>
         <div class="example__wrapper">
           <div class="example__wrapper-flex">
-            <h3 class="example__header">Живой пример</h3>
             <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит пo 16 часов в день. </p>
             <div class="example__flex-wrap">
               <div class="example__time-and-mass">
@@ -178,32 +188,81 @@
                 <p class="example__total-text"><span>Затраты на питание: </span><br> <span>15 000 руб.</span></p>
               </div>
             </div>
-
           </div>
-
           <div class="example__wrapper-flex">
-            <div class="example__img-mobile">
-              <div class="example__img-big-wrapper">
-                <img class="example__img-big" srcset="img/before-mobile.png" width="311" height="232" alt="Упитанный кот">
+
+            <div class="slider__mobile">
+              <input class="slider__mobile-bnt-1" type="radio" id="btn__mobile-1" name="toggle" checked>
+              <input class="slider__mobile-bnt-2" type="radio" id="btn__mobile-2" name="toggle">
+
+              <div class="slider__img-contaiter">
+                <div class="slider__img-inner">
+
+                  <div class="slider__img-wrapper">
+                    <picture>
+                      <source type="image/webp" srcset="img/before-mobile@1x.webp 1x, img/before-mobile@2x.webp 2x">
+
+                      <img class="slider-mobile__cat-big-img" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" width="311" height="232" alt="Упитанный кот">
+                    </picture>
+                  </div>
+
+                  <div class="slider__img-wrapper">
+                    <picture>
+                      <source type="image/webp" srcset="img/after-mobile@1x.webp 1x, img/after-mobile@2x.webp 2x">
+
+                      <img class="slider-mobile__cat-small-img" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" width="251" height="240" alt="Стройный кот">
+                    </picture>
+                  </div>
+                </div>
               </div>
-              <div class="example__img-small-wrapper">
-                <img class="example__img-small" srcset="img/after-mobile.png" width="251" height="240" alt="Стройный кот">
+              <div class="slider__mobile-controls-wrapper">
+                <label for="btn__mobile-1" class="slider__mobile-text">Было</label>
+                <div class="slider__mobile-line"></div>
+                <label for="btn__mobile-2" class="slider__mobile-text">Стало</label>
               </div>
             </div>
-            <div class="example__img-tablet">
-              <div class="example__img-tablet-wrapper">
-                <img class="example__img-big-small" srcset="img/group-cat-tablet.png" width="636" height="517" alt="Упитанный и худой кот">
+
+
+            <div class="slider__tablet-desktop">
+              <input class="slider-bnt-1" type="radio" id="btn-1" name="toggle" checked>
+              <input class="slider-bnt-2" type="radio" id="btn-2" name="toggle">
+              <div class="slider__inner">
+                <div class="slider__slides">
+
+                  <div class="slider__cat-small-wrapper">
+                    <div class="slider__cat-small-background">
+                      <picture>
+                        <source type="image/webp" media="(min-width: 1440px)" srcset="img/after-desktop@1x.webp 1x, img/after-desktop@2x.webp 2x">
+                        <source type="image/webp" media="(min-width: 768px)" srcset="img/after-tablet@1x.webp 1x, img/after-tablet@2x.webp 2x">
+
+                        <source media="(min-width: 1440px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
+                        <img class="slider__cat-small-img" src="img/after-tablet@1x.png" srcset="img/after-tablet@2x.png 2x" width="690" height="517" alt="Стройный кот">
+                      </picture>
+                    </div>
+                  </div>
+
+                  <div class="slider__cat-big-wrapper img-overlay">
+                    <div class="slider__cat-big-background">
+                      <picture>
+                        <source type="image/webp" media="(min-width: 1440px)" srcset="img/before-desktop@1x.webp 1x, img/before-desktop@2x.webp 2x">
+                        <source type="image/webp" media="(min-width: 768px)" srcset="img/before-tablet@1x.webp 1x, img/before-tablet@2x.webp 2x">
+
+                        <source media="(min-width: 1440px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
+                        <img class="slider__cat-big-img" src="img/before-tablet@1x.png" srcset="img/before-tablet@2x.png 2x" width="690" height="517" alt="Упитанный кот">
+                      </picture>
+                    </div>
+                  </div>
+
+                </div>
               </div>
-            </div>
-            <div class="example__img-desktop">
-              <div class="example__img-desktop-wrapper">
-                <img class="example__img-big-small" srcset="img/group-cat-desktop.png" width="636" height="517" alt="Упитанный и худой кот">
+              <div class="slider__controls">
+                <div class="slider__controls-wrapper">
+                  <label for="btn-1" class="slider__text">Было</label>
+                  <div class="slider__line">
+                  </div>
+                  <label for="btn-2" class="slider__text">Стало</label>
+                </div>
               </div>
-            </div>
-            <div class="slider">
-              <span class="slider__before">Было</span>
-              <div class="slider__img"><div class="slider__img-small"></div></div>
-              <span class="slider__after">Стало</span>
             </div>
           </div>
         </div>
@@ -212,19 +271,27 @@
     <footer>
       <div class="cooperation__wrapper">
         <div class="cooperation">
-          <p class="cooperation__header">Приглашаем <br> к сотрудничеству дилеров!</p>
+          <p class="cooperation__header">Приглашаем к сотрудничеству дилеров!</p>
           <div class="cooperation__wrapper-adress">
             <p class="cooperation__adress">ул. Большая Конюшенная, д. 19/8</p>
             <span class="cooperation__adress-city">Санкт-Петербург</span>
           </div>
         </div>
         <div class="map">
+          <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A8c4d11e01c7632a61a8b200122eb927accfa3531ca00feb754b73b9858589753&amp;source=constructor" width="100%" height="400" frameborder="0"></iframe>
           <picture>
-            <source media="(min-width: 1440px)" srcset="img/map-desktop.jpg">
-            <source media="(min-width: 768px)" srcset="img/map-tablet.jpg">
-            <img class="map__img" src="img/map.jpg" width="320" height="400" alt="Карта">
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.webp 1x, img/bg-map-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/bg-map-mobile@1x.webp 1x, img/bg-map-mobile@2x.webp 2x">
+
+            <source media="(min-width: 1440px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x">
+            <img class="map__img" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" width="320" height="400" alt="Карта">
           </picture>
           <picture>
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/map-pin-tablet.webp">
+            <source type="image/webp" srcset="img/map-pin.webp">
+
             <source media="(min-width: 768px)" srcset="img/map-pin-tablet.png">
             <img class="map__pin" src="img/map-pin.png" width="55" height="53" alt="Метка на карте">
           </picture>
@@ -233,48 +300,59 @@
       <div class="footer__container">
         <div class="footer__wrap-flex">
         <div class="footer__logo-wrapper">
-          <svg class="footer__logo-text"width="128" height="24" role="img">
-            <title>Логотип «Cat Energy»</title>
-            <use xlink:href="#logo-mobile-header"></use>
-          </svg>
+          <a href="index.html" tabindex="0">
+            <svg class="footer__logo-text" width="128" height="24" role="img" tabindex="0">
+              <title>Логотип «Cat Energy»</title>
+              <use xlink:href="#logo-mobile-header"></use>
+            </svg>
+          </a>
         </div>
         <div class="social-wrapper">
           <ul class="social__list">
             <li class="social__item">
-              <svg class="footer__social-icon" width="22" height="12" role="img">
-                <title>Логотип Вконтакте</title>
-                <use xlink:href="#vk"></use>
-              </svg>
+              <a href="https://vk.com/" tabindex="0">
+                <svg class="footer__social-icon" width="22" height="12" role="img" tabindex="0">
+                  <title>Логотип Вконтакте</title>
+                  <use xlink:href="#vk"></use>
+                </svg>
+              </a>
             </li>
             <li class="social__item">
-              <svg class="footer__social-icon" width="16" height="16" role="img">
-                <title>Логотип Инстаграм</title>
-                <use xlink:href="#insta"></use>
-              </svg>
+              <a href="https://www.instagram.com/" tabindex="0">
+                <svg class="footer__social-icon" width="16" height="16" role="img" tabindex="0">
+                  <title>Логотип Инстаграм</title>
+                  <use xlink:href="#insta"></use>
+                </svg>
+              </a>
             </li>
             <li class="social__item">
-              <svg class="footer__social-icon" width="10" height="18" role="img">
-                <title>Логотип Фейсбук</title>
-                <use xlink:href="#fb"></use>
-              </svg>
+              <a href="https://ru-ru.facebook.com/" tabindex="0">
+                <svg class="footer__social-icon" width="10" height="18" role="img" tabindex="0">
+                  <title>Логотип Фейсбук</title>
+                  <use xlink:href="#fb"></use>
+                </svg>
+              </a>
             </li>
           </ul>
         </div>
         <ul class="logo-academy__wrapper">
-          <li class="logo-academy__text"><span>Html</span> Academy</li>
+          <li class="logo-academy__text">
+            <a class="logo-academy__text-link" href="https://htmlacademy.ru/" tabindex="0">
+              <span>Html</span> Academy</a>
+          </li>
           <li class="logo-academy__icon">
-            <svg class="footer__social-icon" width="27" height="34" role="img">
-              <title>Логотип академии</title>
-              <use xlink:href="#htmlacademy"></use>
-            </svg>
+            <a href="https://htmlacademy.ru/" tabindex="0">
+              <svg class="footer__academy-icon" width="27" height="34" role="img">
+                <title>Логотип академии</title>
+                <use xlink:href="#htmlacademy"></use>
+              </svg>
+            </a>
           </li>
         </ul>
       </div>
     </div>
     </footer>
     <script src="js/menu.js"></script>
+    <script src="js/slider.js"></script>
   </body>
-    <div style="display:none">
-      <include src="build/img/sprite.svg"></include>
-    </div>
 </html>

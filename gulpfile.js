@@ -38,7 +38,7 @@ gulp.task("images", function () {
       imagemin.jpegtran({progressive: true}),
       imagemin.svgo()
       ]))
-    .pipe(gulp.dest("source/img"));
+    .pipe(gulp.dest("build/img"));
 });
 
 gulp.task("webp", function () {
@@ -64,12 +64,6 @@ gulp.task("html", function (){
     .pipe(gulp.dest("build"));
 });
 
-gulp.task("refresh", function(done) {
-  server.reload();
-  done();
-});
-
-
 gulp.task("server", function () {
   server.init({
     server: "build/",
@@ -86,6 +80,11 @@ gulp.task("server", function () {
 
 gulp.task("clean", function() {
   return del("build");
+});
+
+gulp.task("refresh", function(done) {
+  server.reload();
+  done();
 });
 
 gulp.task("copy", function () {
