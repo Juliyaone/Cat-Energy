@@ -21,7 +21,7 @@
     <header class="page-header">
       <div class="page-header__logo-toogle-wrapper">
         <div class="page-header__logo-wrapper">
-          <a class="page-header__logo-link" tabindex="0" alt="Логотип «Cat Energy»">
+          <a class="page-header__logo-link" tabindex="0">
             <svg class="page-header__logo-image" width="33" height="38" role="img">
               <title>Логотип «Cat Energy»</title>
               <use xlink:href="#logo-mobile"></use>
@@ -37,7 +37,7 @@
           </a>
         </div>
         <div class="page-header__logo-text-wrapper">
-          <a class="page-header__logo-text" tabindex="0" alt="Логотип «Cat Energy»">
+          <a class="page-header__logo-text" tabindex="0">
             <svg class="page-header__logo-text" width="101" height="18" role="img">
               <title>Логотип «Cat Energy»</title>
               <use xlink:href="#logo-mobile-header"></use>
@@ -45,14 +45,14 @@
           </a>
         </div>
         <div class="page-header__toggle-wrapper">
-          <button class="page-header__toggle page-header__toggle--active" type="button" alt="Открыть меню">
+          <button class="page-header__toggle page-header__toggle--active" type="button">
             <span class="visually-hidden">Открыть меню</span>
             <svg class="page-header__toggle-icon" width="24" height="18" role="img">
               <title>Открыть меню</title>
               <use xlink:href="#mobile-menu"></use>
             </svg>
           </button>
-          <button class="page-header__cross page-header__cross--none" type="button" alt="Закрыть меню">
+          <button class="page-header__cross page-header__cross--none" type="button">
             <span class="visually-hidden">Закрыть меню</span>
             <svg class="page-header__cross-icon" width="24" height="18" role="img">
               <title>Закрыть меню</title>
@@ -90,27 +90,25 @@
           <div class="program-selection__img-feed-wrapper">
             <picture>
 
-              <source type="image/webp" media="(min-width: 1440px)" srcset="img/index-can-desktop@1x.webp 1x, img/index-can-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 1220px)" srcset="img/index-can-desktop@1x.webp 1x, img/index-can-desktop@2x.webp 2x">
               <source type="image/webp" media="(min-width: 768px)" srcset="img/index-can-tablet@1x.webp 1x, img/index-can-tablet@2x.webp 2x">
               <source type="image/webp" srcset="img/index-can-mobile@1x.webp, img/index-can-mobile@2x.png 2x">
 
-              <source media="(min-width: 1440px)" srcset="img/index-can-desktop@1x.png 1x, img/index-can-desktop@2x.png 2x">
+              <source media="(min-width: 1220px)" srcset="img/index-can-desktop@1x.png 1x, img/index-can-desktop@2x.png 2x">
               <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg 1x, img/index-can-tablet@2x.jpg 2x">
-              <img class="program-selection__img-feed" src="img/index-can-mobile@1x.png" srcset="img/index-can-mobile@2x.png 2x"alt="Картинка корма для кота">
+              <img class="program-selection__img-feed" src="img/index-can-mobile@1x.png" srcset="img/index-can-mobile@2x.png 2x" alt="Картинка корма для кота">
             </picture>
           </div>
-          <a href="form.html" class="program-selection__button-link">
             <button class="program-selection__button">Подобрать программу</button>
-          </a>
         </section>
       </div>
 
       <section class="nutrition-program">
         <div class="nutrition-program__wrapper">
+          <div class="nutrition-program__text-wrapper">
             <div class="nutrition-program__img-wrapper">
               <div class="nutrition-program__background-img"></div>
             </div>
-          <div class="nutrition-program__text-wrapper">
             <h2 class="nutrition-program__header">Похудение</h2>
             <p class="nutrition-program__text">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
             <a class="nutrition-program__link" href="#">
@@ -119,10 +117,10 @@
           </div>
         </div>
         <div class="nutrition-program__wrapper">
-          <div class="nutrition-program__img-wrapper">
-            <div class="nutrition-program__background-img"></div>
-          </div>
           <div class="nutrition-program__text-wrapper">
+            <div class="nutrition-program__img-wrapper">
+              <div class="nutrition-program__background-img"></div>
+            </div>
             <h2 class="nutrition-program__header">Набор массы</h2>
             <p class="nutrition-program__text">Заработать авторитет среди дворовых котов <br> и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые <br> мышцы!</p>
           <a class="nutrition-program__link" href="#">
@@ -167,9 +165,9 @@
           </ul>
         </div>
       </section>
-
+      <div class="example__header">Живой пример</div>
       <section class="example">
-        <h3 class="example__header">Живой пример</h3>
+        <h3 class="visually-hidden">Живой пример</h3>
         <div class="example__wrapper">
           <div class="example__wrapper-flex">
             <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит пo 16 часов в день. </p>
@@ -210,7 +208,7 @@
                     <picture>
                       <source type="image/webp" srcset="img/after-mobile@1x.webp 1x, img/after-mobile@2x.webp 2x">
 
-                      <img class="slider-mobile__cat-small-img" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" width="251" height="240" alt="Стройный кот">
+                      <img class="slider-mobile__cat-small-img" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" width="311" height="232" alt="Стройный кот">
                     </picture>
                   </div>
                 </div>
@@ -232,10 +230,10 @@
                   <div class="slider__cat-small-wrapper">
                     <div class="slider__cat-small-background">
                       <picture>
-                        <source type="image/webp" media="(min-width: 1440px)" srcset="img/after-desktop@1x.webp 1x, img/after-desktop@2x.webp 2x">
+                        <source type="image/webp" media="(min-width: 1220px)" srcset="img/after-desktop@1x.webp 1x, img/after-desktop@2x.webp 2x">
                         <source type="image/webp" media="(min-width: 768px)" srcset="img/after-tablet@1x.webp 1x, img/after-tablet@2x.webp 2x">
 
-                        <source media="(min-width: 1440px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
+                        <source media="(min-width: 1220px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
                         <img class="slider__cat-small-img" src="img/after-tablet@1x.png" srcset="img/after-tablet@2x.png 2x" width="690" height="517" alt="Стройный кот">
                       </picture>
                     </div>
@@ -244,10 +242,10 @@
                   <div class="slider__cat-big-wrapper img-overlay">
                     <div class="slider__cat-big-background">
                       <picture>
-                        <source type="image/webp" media="(min-width: 1440px)" srcset="img/before-desktop@1x.webp 1x, img/before-desktop@2x.webp 2x">
+                        <source type="image/webp" media="(min-width: 1220px)" srcset="img/before-desktop@1x.webp 1x, img/before-desktop@2x.webp 2x">
                         <source type="image/webp" media="(min-width: 768px)" srcset="img/before-tablet@1x.webp 1x, img/before-tablet@2x.webp 2x">
 
-                        <source media="(min-width: 1440px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
+                        <source media="(min-width: 1220px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
                         <img class="slider__cat-big-img" src="img/before-tablet@1x.png" srcset="img/before-tablet@2x.png 2x" width="690" height="517" alt="Упитанный кот">
                       </picture>
                     </div>
@@ -278,13 +276,13 @@
           </div>
         </div>
         <div class="map">
-          <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A8c4d11e01c7632a61a8b200122eb927accfa3531ca00feb754b73b9858589753&amp;source=constructor" width="100%" height="400" frameborder="0"></iframe>
+          <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad87e10b6db8d0267663c5c84234c16b712011f99c78e33bd2d12dab4f6823a5e&amp;source=constructor" width="100%" height="400"></iframe>
           <picture>
-            <source type="image/webp" media="(min-width: 1440px)" srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 1220px)" srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x">
             <source type="image/webp" media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.webp 1x, img/bg-map-tablet@2x.webp 2x">
             <source type="image/webp" srcset="img/bg-map-mobile@1x.webp 1x, img/bg-map-mobile@2x.webp 2x">
 
-            <source media="(min-width: 1440px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
+            <source media="(min-width: 1220px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
             <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x">
             <img class="map__img" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" width="320" height="400" alt="Карта">
           </picture>

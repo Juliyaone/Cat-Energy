@@ -1,10 +1,8 @@
 .page-header {
   display: flex;
   flex-direction: column;
-  width: 320px;
   height: auto;
   background-color: #ffffff;
-  margin: auto;
 }
 
 .page-header__logo-image-tablet {
@@ -161,10 +159,10 @@
   .page-header {
     flex-direction: row;
     justify-content: space-between;
-    width: 708px;
     height: auto;
-    padding-left: 30px;
+    min-width: 708px;
     padding-top: 20px;
+    padding-left: 30px;
     padding-right: 30px;
     margin-bottom: 10px;
   }
@@ -243,12 +241,12 @@
   }
 
   .site-list__item {
+    height: 35px;
+    width: 153px;
     border-bottom: none;
     border-top: none;
     margin-right: 0;
     text-align: right;
-    height: 35px;
-    width: 153px;
   }
 
   .site-list--item-active a {
@@ -267,15 +265,18 @@
     border-top: none;
   }
 
-  @media (min-width: 1440px) {
+}
+
+  @media (min-width: 1220px) {
     .page {
-      width: 1440px;
+      width: 1220px;
       height: auto;
     }
 
     .page-header {
       position: relative;
-      width: 1300px;
+      max-width: 100%;
+      min-width: 1150px;
       height: auto;
       background-color: transparent;
       margin: 0 auto;
@@ -374,4 +375,3 @@
       color: #ffffff;
     }
   }
-}

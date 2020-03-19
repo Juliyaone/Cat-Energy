@@ -2,10 +2,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 280px;
   min-height: 75px;
   margin: 0 auto;
-  padding: 19px;
+  padding: 0;
 }
 
 .cooperation__header {
@@ -18,13 +17,19 @@
   font-size: 16px;
   line-height: 20px;
   padding: 0;
+  padding-left: 20px;
   margin: 0;
+}
+
+.cooperation__wrapper {
+  width: 100%;
 }
 
 .cooperation__wrapper-adress {
   width: 138px;
   padding: 0;
   padding-top: 7px;
+  padding-right: 20px;
   line-height: 20px;
   font-size: 14px;
   min-height: 64px;
@@ -44,17 +49,17 @@
 
 @media (min-width: 768px) {
   .cooperation {
-    width: 728px;
+    width: 100%;
     min-height: 160px;
-    padding: 20px;
-    padding-top: 0;
+    padding: 0;
+    padding-bottom: 20px;
   }
 
   .cooperation__header {
     width: 200px;
     font-size: 20px;
     line-height: 25px;
-    padding-left: 50px;
+    padding-left: 70px;
   }
 
   .cooperation__wrapper-adress {
@@ -64,6 +69,7 @@
     align-items: flex-end;
     text-align: right;
     padding-top: 0;
+    padding-right: 0;
     width: 250px;
     min-height: 80px;
   }
@@ -72,20 +78,20 @@
     font-size: 16px;
     line-height: 20px;
     width: 195px;
-    padding-right: 53px;
+    padding-right: 57px;
   }
 
   .cooperation__adress-city {
     font-size: 16px;
     line-height: 20px;
     width: 195px;
-    padding-right: 53px;
+    padding-right: 57px;
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: 1220px) {
     .cooperation__wrapper {
       position: relative;
-      width: 1440px;
+      width: 100%;
       min-height: 400px;
       margin: 0 auto;
     }

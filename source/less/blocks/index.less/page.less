@@ -2,7 +2,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 320px;
+  width: 100%;
   height: auto;
   background-color: #ffffff;
   margin: auto;
@@ -15,7 +15,7 @@
   background-color: @green;
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: center top;
+  background-position: center;
   background-size: cover;
   color: #ffffff;
   padding: 0;
@@ -29,39 +29,41 @@
 
 @media (min-width: 768px) {
   .page {
-    width: 768px;
+    min-width: 728px;
   }
 
   .page__background-image {
     display: none;
   }
+}
 
-  @media (min-width: 1440px) {
-    .page {
-      position: relative;
-      width: 1440px;
-    }
+@media (min-width: 1220px) {
+  .page {
+    position: relative;
+    max-width: 100%;
+    min-width: 1200px;
+    margin: 0 auto;
+  }
 
-    .page__background-image {
-      position: absolute;
-      right: 0;
-      top: -165px;
-      display: block;
-      width: 720px;
-      height: 695px;
-      background-color: @green;
-      background-image: url("../img/index-background-desktop@1x.jpg");
-      background-repeat: no-repeat;
-      background-position: center top;
-      background-size: cover;
-      color: #ffffff;
-      padding: 0;
-      margin: 0;
-      z-index: 1;
+  .page__background-image {
+    position: absolute;
+    right: 0;
+    top: -165px;
+    display: block;
+    width: 720px;
+    height: 695px;
+    background-color: @green;
+    background-image: url("../img/index-background-desktop@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    color: #ffffff;
+    padding: 0;
+    margin: 0;
+    z-index: 1;
 
-      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-        background-image: url("../img/index-background-desktop@2x.jpg");
-      }
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/index-background-desktop@2x.jpg");
     }
   }
 }
