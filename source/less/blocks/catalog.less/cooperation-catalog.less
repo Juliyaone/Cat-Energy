@@ -3,25 +3,40 @@
   justify-content: space-between;
   align-items: center;
   background-color: #f2f2f2;
-  width: 280px;
   min-height: 75px;
   margin: 0 auto;
   padding: 19px;
 }
 
+.cooperation-catalog .cooperation__header {
+  padding-left: 0;
+}
+
+.cooperation-catalog .cooperation__wrapper-adress {
+  padding-right: 0;
+}
+
 @media (min-width: 768px) {
   .cooperation-catalog {
-    width: 728px;
     min-height: 160px;
     padding: 20px;
   }
+
+  .cooperation-catalog .cooperation__header {
+    padding-left: 50px;
+  }
+
+  .cooperation-catalog .cooperation__wrapper-adress .cooperation__adress,
+  .cooperation-catalog .cooperation__wrapper-adress .cooperation__adress-city {
+    padding-right: 40px;
+  }
+
 
   @media (min-width: 1220px) {
     .cooperation-catalog {
       position: absolute;
       left: 109px;
       top: 100px;
-      width: 520px;
       min-height: 150px;
       background-color: #ffffff;
       padding: 25px;

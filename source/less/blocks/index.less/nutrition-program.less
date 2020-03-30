@@ -1,6 +1,8 @@
 .nutrition-program {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  margin-bottom: 20px;
 }
 
 .nutrition-program__wrapper {
@@ -128,10 +130,11 @@
 @media (min-width: 768px) {
   .nutrition-program__wrapper {
     position: relative;
+    width: 100%;
     height: auto;
     padding-top: 30px;
     padding-bottom: 55px;
-    margin: 0 auto;
+    margin: 0;
     margin-bottom: 30px;
     z-index: 100;
   }
@@ -145,7 +148,7 @@
   .nutrition-program__img-wrapper::before {
     width: 200px;
     height: 200px;
-    left: 470px;
+    left: 460px;
     top: 65px;
   }
 
@@ -154,8 +157,8 @@
     width: 140px;
     height: 195px;
     background-image: url("../img/slender-cat.svg");
-    left: 497px;
-    top: 50px;
+    left: 489px;
+    top: 42px;
   }
 
   .nutrition-program__wrapper:nth-child(2) .nutrition-program__background-img {
@@ -163,13 +166,13 @@
     height: 112px;
     background-image: url("../img/strong-cat.svg");
     top: 108px;
-    left: 435px;
+    left: 425px;
   }
 
   .nutrition-program__text-wrapper {
-    width: 665px;
+    width: 654px;
     margin: 0 auto;
-    padding-left: 75px;
+    padding-left: 65px;
   }
 
   .nutrition-program__text {
@@ -194,12 +197,13 @@
     text-align: start;
     line-height: 36px;
     padding: 0;
-    padding-top: 50px;
+    padding-top: 40px;
     margin: 0;
   }
 
   .nutrition-program__wrapper:nth-child(2) .nutrition-program__header {
     padding-left: 0;
+    padding-top: 50px;
   }
 
   .nutrition-program__link-text {
@@ -218,7 +222,7 @@
 
   @media (min-width: 1220px) {
     .nutrition-program {
-      width: 1220px;
+      width: 1200px;
       flex-direction: row;
       justify-content: space-between;
       margin: 0 auto;
@@ -264,6 +268,7 @@
 
     .nutrition-program__wrapper:nth-child(2) .nutrition-program__header {
       margin-left: 65px;
+      padding-top: 40px;
     }
 
     .nutrition-program__img-wrapper::before {

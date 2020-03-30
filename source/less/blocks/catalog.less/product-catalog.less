@@ -1,5 +1,5 @@
 .product__wrapper {
-  margin: 0 auto;
+  width: 100%;
 }
 
 .product__header {
@@ -9,14 +9,16 @@
   line-height: 55px;
   font-weight: normal;
   text-align: left;
-  padding: 20px;
+  padding: 0;
+  padding-top: 20px;
   padding-bottom: 28px;
-  border-top: 1px solid #e6e6e6;
+  margin: 0 auto;
 }
 
 .product__list {
   display: flex;
   flex-direction: column;
+  width: 100%;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -24,8 +26,11 @@
 }
 
 .product__item-wrapper {
-  width: 320px;
+  width: 99%;
   height: auto;
+  border: 1px solid #e6e6e6;
+  margin: 0 auto;
+  margin-top: -1px;
 }
 
 .product__item {
@@ -33,12 +38,10 @@
   flex-direction: row;
   flex-wrap: wrap;
   min-height: 183px;
-  border: 1px solid #e6e6e6;
-  padding-right: 15px;
-  padding-left: 20px;
+  width: 280px;
   padding-top: 23px;
   padding-bottom: 2px;
-  margin-top: -1px;
+  margin: 0 auto;
 }
 
 .product__img-wrapper {
@@ -180,9 +183,7 @@
     font-size: 60px;
     border-top: none;
     padding-top: 45px;
-    padding-left: 30px;
     padding-bottom: 45px;
-    padding-right: 30px;
     margin-bottom: 120px;
   }
 
@@ -197,6 +198,8 @@
 
   .product__item-wrapper {
     min-height: 435px;
+    width: 325px;
+    border: none;
     margin: 0;
   }
 
@@ -209,7 +212,7 @@
     background-color: #f2f2f2;
     padding: 0;
     margin: 0;
-    margin-bottom: 140px;
+    margin-bottom: 134px;
   }
 
   .product__description {
@@ -328,7 +331,7 @@
 
   @media (min-width: 1220px) {
     .product__wrapper {
-      width: 1220px;
+      width: 100%;
     }
 
     .site-list__item:not(.site-list--item-index) a {
@@ -348,7 +351,7 @@
     }
 
     .product__list {
-      width: 1220px;
+      width: 1200px;
       margin: 0 auto;
       margin-bottom: 40px;
     }
@@ -360,6 +363,7 @@
     .product__item {
       width: 250px;
       margin-bottom: 0;
+      margin-bottom: 15px;
       margin-top: 120px;
     }
 
@@ -380,7 +384,7 @@
     }
 
     .product__item-wrapper:last-child .product__item {
-      width: 250px;
+      width: 248px;
     }
 
     .product__item-wrapper:last-child .product__item .product__additional-button {

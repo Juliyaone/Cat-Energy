@@ -3,14 +3,18 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: auto;
   background-color: #ffffff;
-  margin: auto;
   z-index: 1;
 }
 
+.page-main {
+  width: 100%;
+}
+
+
 .page__background-image {
-  width: auto;
+  position: relative;
+  width: 100%;
   height: 305px;
   background-color: @green;
   background-image: url("../img/index-background-mobile@1x.jpg");
@@ -20,7 +24,7 @@
   color: #ffffff;
   padding: 0;
   margin: 0;
-  z-index: 2;
+  z-index: 1;
 
   @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
     background-image: url("../img/index-background-mobile@2x.jpg");
@@ -29,7 +33,11 @@
 
 @media (min-width: 768px) {
   .page {
-    min-width: 728px;
+    width: 768px;
+  }
+
+  .page-main {
+    width: 100%;
   }
 
   .page__background-image {
@@ -40,15 +48,18 @@
 @media (min-width: 1220px) {
   .page {
     position: relative;
-    max-width: 100%;
-    min-width: 1220px;
-    margin: 0 auto;
+    width: 100%;
+    background-color: transparent;
+    z-index: 4;
+  }
+
+  .page-main {
+    width: 100%;
   }
 
   .page__background-image {
     position: absolute;
     right: 0;
-    top: -165px;
     display: block;
     width: 720px;
     height: 695px;

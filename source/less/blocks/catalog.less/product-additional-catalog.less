@@ -23,7 +23,7 @@
 }
 
 .product-additional__header {
-  width: 250px;
+  width: 280px;
   min-height: 75px;
   line-height: 65px;
   font-size: 24px;
@@ -31,17 +31,15 @@
   font-weight: 400;
   color: #111111;
   padding: 0;
-  margin: 0;
-}
-
-.product__additional-wrapper {
-  padding-left: 20px;
-  padding-right: 20px;
   margin: 0 auto;
 }
 
+.product__additional-wrapper {
+  width: 100%;
+}
+
 .product-additional {
-  width: 280px;
+  width: 100%;
   height: auto;
   list-style: none;
   padding: 0;
@@ -50,8 +48,10 @@
 }
 
 .product-additional__item {
+  width: 280px;
   border-top: 1px solid #e6e6e6;
   padding-top: 15px;
+  margin: 0 auto;
   margin-bottom: 15px;
 }
 
@@ -121,6 +121,7 @@
   background-size: contain;
   z-index: 1;
   padding-top: 70px;
+  margin: 0 auto;
   margin-bottom: 35px;
 }
 
@@ -162,11 +163,12 @@
 
   .product-additional__header {
     position: relative;
-    width: 413px;
+    width: 620px;
     height: auto;
-    text-align: center;
+    text-align: left;
     line-height: 75px;
     font-size: 36px;
+    margin: 0 auto;
     margin-bottom: 60px;
   }
 
@@ -183,7 +185,7 @@
   .product-additional__header::after {
     content: "";
     position: absolute;
-    left: 410px;
+    left: 381px;
     top: 40px;
     width: 327px;
     height: 3px;
@@ -191,13 +193,12 @@
   }
 
   .product__additional-wrapper {
-    padding-left: 30px;
-    padding-right: 30px;
+    width: 100%;
     margin-bottom: 42px;
   }
 
   .product-additional {
-    width: 708px;
+    width: 100%;
     margin-bottom: 70px;
   }
 
@@ -206,14 +207,15 @@
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
+    width: 646px;
     border-top: 0;
     border: 1px solid #e6e6e6;
     padding: 0;
-    padding-left: 38px;
-    padding-right: 38px;
+    padding-left: 40px;
+    padding-right: 20px;
     padding-bottom: 25px;
     padding-top: 25px;
-    margin: 0;
+    margin: 0 auto;
     margin-top: -1px;
   }
 
@@ -282,15 +284,14 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      width: 1220px;
+      width: 1200px;
       padding: 0;
       margin: 0 auto;
       margin-bottom: 15px;
     }
 
     .product-additional__header {
-      text-align: left;
-      min-width: 400px;
+      width: 1200px;
     }
 
     .product-additional__header::before {
@@ -301,7 +302,7 @@
 
     .product-additional__header::after {
       left: 370px;
-      width: 955px;
+      width: 831px;
       height: 2px;
     }
 
@@ -319,6 +320,7 @@
       padding-left: 0;
       padding-top: 15px;
       padding-bottom: 15px;
+      margin: 0;
     }
 
     .product-additional__button-wrapper {
@@ -348,7 +350,7 @@
       background-image: url("../img/gift-photo-mobile.jpg");
       background-size: cover;
       padding-top: 65px;
-      margin-bottom: 0;
+      margin: 0;
     }
 
     .product-additional__wrapper-flex {

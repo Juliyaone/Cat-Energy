@@ -17,6 +17,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  border-bottom: 1px solid #e6e6e6;
 }
 
 .page-header__logo-wrapper {
@@ -136,14 +137,6 @@
   opacity: 30%;
 }
 
-.site-list__item:first-child {
-  border-top: 1px solid #e6e6e6;
-}
-
-.site-list__item:last-child {
-  border-bottom: none;
-}
-
 .site-list a {
   text-decoration: none;
   color: #111111;
@@ -159,11 +152,9 @@
   .page-header {
     flex-direction: row;
     justify-content: space-between;
-    height: auto;
-    min-width: 708px;
     padding-top: 20px;
     padding-left: 30px;
-    padding-right: 30px;
+    padding-right: 15px;
     margin-bottom: 10px;
   }
 
@@ -196,6 +187,7 @@
     align-items: center;
     width: 173px;
     padding-top: 3px;
+    border-bottom: none;
   }
 
   .page-header__logo-text-wrapper {
@@ -211,16 +203,18 @@
   }
 
   .page-header__main-nav-wrapper {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 530px;
+    width: 440px;
     height: auto;
     padding-top: 10px;
+    z-index: 3;
   }
 
   .main-nav {
-    width: 530px;
+    width: 440px;
   }
 
   .main-nav--closed {
@@ -242,7 +236,7 @@
 
   .site-list__item {
     height: 35px;
-    width: 153px;
+    width: auto;
     border-bottom: none;
     border-top: none;
     margin-right: 0;
@@ -268,20 +262,15 @@
 
 @media (min-width: 1220px) {
   .page {
-    width: 1220px;
+    width: 100%;
     height: auto;
   }
 
   .page-header {
     position: relative;
-    max-width: 100%;
-    min-width: 1150px;
-    height: auto;
     background-color: transparent;
-    margin: 0 auto;
+    margin: 0;
     padding: 0;
-    padding-right: 70px;
-    padding-left: 70px;
     z-index: 2;
     margin-bottom: 20px;
   }
