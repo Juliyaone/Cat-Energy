@@ -307,13 +307,15 @@
     }
 
     .product-additional {
-      width: 895px;
+      width: auto;
     }
 
     .product-additional__item {
       display: flex;
       flex-wrap: nowrap;
       align-items: center;
+      width: auto;
+      border-top: none;
       border-left: none;
       border-right: none;
       padding-right: 0;
@@ -321,6 +323,10 @@
       padding-top: 15px;
       padding-bottom: 15px;
       margin: 0;
+    }
+
+    .product-additional__item:nth-child(1) {
+      border-top: 1px solid #e6e6e6;
     }
 
     .product-additional__button-wrapper {
